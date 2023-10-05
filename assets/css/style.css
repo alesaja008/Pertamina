@@ -4895,8 +4895,12 @@ color: rgb(255, 255, 255);
   border-radius: 50%;
   font-size: 20px;
   position: relative;
-  left: 10rem;
-    top: -7rem;
+  left: -9rem;
+  top: -1rem;
+}
+
+.img-video {
+  border-radius: 20px;
 }
 
 .appie-video-player-item .content {
