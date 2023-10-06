@@ -4903,6 +4903,21 @@ color: rgb(255, 255, 255);
   border-radius: 20px;
 }
 
+
+.bg-lab-and-research {
+    background: linear-gradient(90deg, rgba(223,13,27,1) 0%, rgba(153,20,29,1) 100%);
+    border-radius: 0 0 4rem 4rem;
+    -webkit-border-radius: 0 0 4rem 4rem;
+    -moz-border-radius: 0 0 4rem 4rem;
+    -ms-border-radius: 0 0 4rem 4rem;
+    -o-border-radius: 0 0 4rem 4rem;
+}
+
+.img-all-lab {
+  position: relative;
+  top: -2.5rem;
+}
+
 .appie-video-player-item .content {
   padding-left: 100px;
   padding-top: 35px
@@ -5167,12 +5182,19 @@ color: rgb(255, 255, 255);
   margin: 30px 28px 0
 }
 
+
+.card-detail-img {
+  padding: 100px 20px 100px 80px;
+}
+
 .appie-fun-fact-box {
-  padding: 90px 70px;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px
+  border-radius: 25px;
+  background: linear-gradient(77deg, rgba(223,13,27,1) 0%, rgba(153,20,29,1) 100%);
+
 }
 
 .appie-fun-fact-box .appie-fun-fact-content>.title {
