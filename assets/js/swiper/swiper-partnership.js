@@ -1,5 +1,5 @@
-document.addEventListener("mouseout", disableCardAnimate);
-document.addEventListener('DOMContentLoaded', animateStatus);
+// document.addEventListener("mouseout", disableCardAnimate);
+// document.addEventListener('DOMContentLoaded', animateStatus);
 
 const swiper = new Swiper('.hero-slider', {
     loop: true,
@@ -32,7 +32,7 @@ function changeActiveBg() {
     }], {
         duration: 300,
     });
-    backgroundImage.src = activeElement.src
+    // backgroundImage.src = activeElement.src
 }
 
 // function cardAnimate(e) {
@@ -49,19 +49,19 @@ function changeActiveBg() {
 //     });
 // }
 
-function disableCardAnimate(d) {
-    this.querySelectorAll('.swiper-slide-active .product').forEach(function(boxMove) {
-        boxMove.style.transform = "rotateY(0deg) rotateX(0deg)"
-    });
-    this.querySelectorAll('.header .animate-item').forEach(function(itemMove) {
-        itemMove.style.transform = "translate(0px, 0px)"
-    });
-}
+// function disableCardAnimate(d) {
+//     this.querySelectorAll('.swiper-slide-active .product').forEach(function(boxMove) {
+//         boxMove.style.transform = "rotateY(0deg) rotateX(0deg)"
+//     });
+//     this.querySelectorAll('.header .animate-item').forEach(function(itemMove) {
+//         itemMove.style.transform = "translate(0px, 0px)"
+//     });
+// }
 
-function animateStatus() {
-    if (window.innerWidth > 576) {
-        document.addEventListener("mousemove", cardAnimate);
-    }
-}
+// function animateStatus() {
+//     if (window.innerWidth > 576) {
+//         document.addEventListener("mousemove", cardAnimate);
+//     }
+// }
 
-window.onload = changeActiveBg();
+// window.onload = changeActiveBg();
