@@ -6294,11 +6294,7 @@ background-color: #1568B3;
 .btn-footer-mobile {
   position: absolute;
 }
-.post-btn-mobile {
-  position: absolute;
-  top: -2rem;
-  right: -7rem;
-}
+
 
 .icon-opsi-mobile {
   width: 20%;
@@ -6307,6 +6303,12 @@ background-color: #1568B3;
   position: absolute;
   left: -2rem;
   top: -5px;
+}
+
+.post-btn-mobile {
+    position: absolute;
+    left: 12rem;
+    top: -1rem;
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px)  {
@@ -6465,9 +6467,9 @@ span.text-date {
 @media screen and (min-width: 320px)   {
   .base-footer {
     position: absolute;
-    width: 49%;
+    width: 53%;
     z-index: 1;
-    height: 22%;
+    height: 20%;
   }
 
   .posisi-up {
