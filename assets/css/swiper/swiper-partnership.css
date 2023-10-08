@@ -227,14 +227,14 @@
 @media screen and (min-width: 1728px)   {
     .product__content {
         position: absolute;
-        top: -13rem;
+        top: 1rem;
         left: -22rem;
         width: 80rem;
         transform: translateZ(63px);
         z-index: -5;
     }
     .product__banner {
-        margin-top: -4rem;
+        margin-top: 10rem;
     }
 
 }
