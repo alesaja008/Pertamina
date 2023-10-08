@@ -64,4 +64,4 @@ function changeActiveBg() {
 //     }
 // }
 
-// window.onload = changeActiveBg();
+window.onload = changeActiveBg();
