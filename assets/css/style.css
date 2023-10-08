@@ -4115,10 +4115,14 @@ color: rgb(255, 255, 255);
 
 
 .appie-footer-area {
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 60px;
   background: #292929;
-  border-radius: 20rem 0 0 0;
+  border-radius: 5rem 0 0 0;
+  -webkit-border-radius: 5rem 0 0 0;
+  -moz-border-radius: 5rem 0 0 0;
+  -ms-border-radius: 5rem 0 0 0;
+  -o-border-radius: 5rem 0 0 0;
 }
 
 .appie-footer-area.appie-footer-3-area {
@@ -6287,6 +6291,24 @@ background-color: #1568B3;
   -o-border-radius: 1rem 1rem 0 0;
 }
 
+.btn-footer-mobile {
+  position: absolute;
+}
+.post-btn-mobile {
+  position: absolute;
+  top: -2rem;
+  right: -7rem;
+}
+
+.icon-opsi-mobile {
+  width: 20%;
+  background-color: #167ac6;
+  border-radius: 1.5rem 0;
+  position: absolute;
+  left: -2rem;
+  top: -5px;
+}
+
 @media screen and (min-width: 576px) and (max-width: 767.98px)  {
   .item-img{
     position: absolute;
@@ -6331,7 +6353,7 @@ background-color: #1568B3;
   top: 62rem;
   z-index: 0;
   transform: translate(0);
-  width: calc(47% - 6px);
+  width: calc(50% - 6px);
   }
 }
 
@@ -6339,10 +6361,20 @@ background-color: #1568B3;
   .item-img{
     position: absolute;
     left: 6%;
-    top: 68rem;
+    top: 71rem;
     z-index: 0;
     transform: translate(0);
-    width: calc(42% - 6px);
+    width: calc(40% - 6px);
+   }
+ }
+@media screen and (min-width: 1728px)   {
+  .item-img{
+    position: absolute;
+    left: 12%;
+    top: 75rem;
+    z-index: 0;
+    transform: translate(0);
+    width: calc(38% - 6px);
    }
  }
 
@@ -6353,7 +6385,7 @@ background-color: #1568B3;
   top: 81rem;
   z-index: 0;
   transform: translate(0);
-  width: calc(32% - 6px);
+  width: calc(34% - 6px);
   }
 }
 
@@ -6361,7 +6393,7 @@ background-color: #1568B3;
  .item-img{
   position: absolute;
   left: 17%;
-  top: 84rem;
+  top: 85rem;
   z-index: 0;
   transform: translate(0);
   width: calc(32% - 6px);
@@ -6426,6 +6458,22 @@ span.text-date {
   font-weight: 300;
 }
 
+.font-size-mobile{
+  font-size: 10px;
+}
+
+@media screen and (min-width: 320px)   {
+  .base-footer {
+    position: absolute;
+    width: 49%;
+    z-index: 1;
+    height: 22%;
+  }
+
+  .posisi-up {
+    z-index: 2;
+  }
+}
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
   .base-footer {
