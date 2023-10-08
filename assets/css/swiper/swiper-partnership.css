@@ -189,6 +189,11 @@
     z-index: 9;
 }
 
+.detail-part-text {
+    padding-left: 30rem;
+    padding-right: 30rem;
+}
+
 @media (min-width: 320px) { 
     .product__content {
         position: absolute;
