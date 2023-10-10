@@ -1965,7 +1965,13 @@ color: rgb(255, 255, 255);
 .appie-hero-content.appie-hero-content-6 .appie-title {
   font-weight: 700;
   font-size: 70px;
-  line-height: 80px
+  line-height: 80px;
+}
+
+.appie-hero-content.appie-hero-content-6 .title-olimart {
+  font-size: 45px;
+  line-height: 70px;
+  text-align: center;
 }
 
 .appie-hero-content.appie-hero-content-6.appie-hero-content-7 p {
@@ -2089,6 +2095,11 @@ color: rgb(255, 255, 255);
     font-size: 60px;
     line-height: 70px
   }
+  .appie-hero-content.appie-hero-content-6 .title-olimart {
+    font-size: 45px;
+    line-height: 70px;
+    text-align: center;
+  }
 
   .appie-hero-content-2 .appie-title {
     font-size: 50px;
@@ -2101,7 +2112,12 @@ color: rgb(255, 255, 255);
   .appie-hero-content-2 .appie-title,
   .appie-hero-content.appie-hero-content-6 .appie-title {
     font-size: 50px;
-    line-height: 60px
+    line-height: 60px;
+  }
+  .appie-hero-content.appie-hero-content-6 .title-olimart {
+    font-size: 40px;
+    line-height: 70px;
+    text-align: center;
   }
 
   .appie-hero-area-2 .appie-hero-thumb-3 {
@@ -2113,6 +2129,12 @@ color: rgb(255, 255, 255);
   .appie-hero-content.appie-hero-content-6 .appie-title {
     font-size: 36px;
     line-height: 46px
+  }
+
+  .appie-hero-content.appie-hero-content-6 .title-olimart {
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
   }
 
   .appie-hero-area-2 .appie-hero-thumb-3 {
@@ -6639,8 +6661,22 @@ span.text-date {
   border-radius: 0 0 4rem 4rem;
 }
 
+.bg-bkl {
+  background: url(/assets/images/asset_pertamina/background_bengkel.jpg)center/cover no-repeat;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 65px;
+  position: relative;
+  z-index: 10;
+  border-radius: 0 0 4rem 4rem;
+}
 
 
+.text-olimart {
+  background-color: white;
+  padding: 10px;
+  border-radius: 50px;
+}
 
 .btn-color-page {
   border-radius: 99px;
