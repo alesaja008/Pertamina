@@ -174,3 +174,13 @@ font-size: 13px !important;
 }
 
 
+/* logo */
+.logo-slide img{
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
