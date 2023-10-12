@@ -184,21 +184,20 @@ p {
 }
 
 .main-btn {
-  background: linear-gradient(114.34deg, #e32726 0, #aa3d00 113.44%);
-  border-color: #e32726;
-  padding: 0 20px 0 20px;
-  font-size: 17px;
-  text-align: center;
-  line-height: 45px;
-  cursor: pointer;
-  z-index: 5;
-  transition: .4s ease-out;
+  background: #1568B3;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
   position: relative;
-  right: 20px;
+  border: 1px solid #ffffff57;
+  top: 4px;
+  text-decoration: none;
 }
 
 .main-btn:hover {
-  background: #ff0100
+  background: #074b8a;
 }
 
 .main-btn.main-btn-3 {
@@ -1972,6 +1971,7 @@ color: rgb(255, 255, 255);
   font-size: 45px;
   line-height: 70px;
   text-align: center;
+      margin-top: 12rem;
 }
 
 .appie-hero-content.appie-hero-content-6.appie-hero-content-7 p {
@@ -2579,10 +2579,10 @@ color: rgb(255, 255, 255);
   padding-right: 10px
 }
 
-.appie-traffic-title {
+/* .appie-traffic-title {
   padding-right: 220px;
   margin-bottom: 43px
-}
+} */
 
 .appie-traffic-title .title {
   font-size: 44px;
@@ -4531,9 +4531,9 @@ color: rgb(255, 255, 255);
   }
 }
 
-.appie-about-3-area .appie-traffic-title {
+/* .appie-about-3-area .appie-traffic-title {
   padding-right: 100px
-}
+} */
 
 @media (max-width:767px) {
   .appie-signup-box {
@@ -6672,6 +6672,16 @@ span.text-date {
   border-radius: 0 0 4rem 4rem;
 }
 
+.bg-bkl-enduro {
+  background: url(/assets/images/asset_pertamina/background_bengkel-2.jpg)center/cover no-repeat;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  position: relative;
+  z-index: 10;
+  border-radius: 0 0 4rem 4rem;
+}
+
 .bg-dst {
   background: url(/assets/images/asset_pertamina/Distributor_bg.jpg) center/cover no-repeat;
   padding-top: 25rem;
@@ -6858,4 +6868,82 @@ table td {
   text-align: left;
   vertical-align: top;
 
+}
+
+/* form scrool */
+.search-form input[type=search] {
+  border-radius: 50px  !important;
+  -webkit-border-radius: 50px  !important;
+  -moz-border-radius: 50px  !important;
+  -ms-border-radius: 50px  !important;
+  -o-border-radius: 50px  !important;
+}
+
+.loc-address {
+  font-size: 16px;
+}
+
+.title-detail-address {
+  font-size: 9px;
+  color: #6c757da8;
+}
+
+.arow {
+  position: relative;
+  margin: auto;
+  top: 5px;
+  left: 0;
+  right: 0;
+  display: block;
+  width: calc(50% - 0px);
+}
+
+.tabel-scrool{
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0 20px;
+  overflow: hidden;
+  max-height: 500px;
+  overflow-y: auto;
+  transition: .4s linear .2s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transition: .4s linear .2s;
+  -moz-transition: .4s linear .2s;
+  -ms-transition: .4s linear .2s;
+  -o-transition: .4s linear .2s;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #dee2e6;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #6c757d;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.direct-btn{
+  cursor: pointer;
+}
+
+
+
+.card-bkl-add {
+  position: relative;
+  top: -2rem;
+  z-index: 20;
 }
