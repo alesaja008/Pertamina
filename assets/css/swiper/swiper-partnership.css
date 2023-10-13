@@ -452,3 +452,10 @@
         display: block;
     }
 }
+
+.video-popup-partnership {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
