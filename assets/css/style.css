@@ -6926,6 +6926,14 @@ img.card-img-top {
   font-weight: bold;
 }
 
+.nav-pillsDist .nav-link.active, .nav-pills .show > .nav-link {
+  color: rgb(255, 255, 255);
+  background-color: #f8f9fa00;
+  font-weight: bold;
+  background-color: #0b76da;
+  border-radius: 50px;
+}
+
 .has-search .form-control {
   padding-left: 2.375rem;
 }
@@ -7130,3 +7138,5 @@ table td {
   top: -2rem;
   z-index: 20;
 }
+
+

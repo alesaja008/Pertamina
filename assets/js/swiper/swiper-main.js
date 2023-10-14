@@ -98,3 +98,6 @@ var swiperTab = new Swiper(".mySwiperTab", {
       },
     });
 
+
+    // distributo detail slider
+
