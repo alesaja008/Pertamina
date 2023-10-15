@@ -6468,7 +6468,6 @@ background-color: #1568B3;
   font-size: 18px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: "Inter", sans-serif;
   text-align: left;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -6529,12 +6528,16 @@ span.text-date {
   -o-border-radius: 0;
 }
 .btn-color-page {
-  border-radius: 20px;
+  border-radius: 50px;
   background: #1568B3;
   padding: 15px;
-  /* text-align: center; */
-  font-size: 23px;
+  /*text-align: center;
+  */font-size: 23px;
   line-height: 1.5;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .appie-video-player-item .thumb .video-popup {
@@ -7135,5 +7138,8 @@ table td {
   top: -2rem;
   z-index: 20;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2e651696382a7623a7881b47c4593ff81ea49619
