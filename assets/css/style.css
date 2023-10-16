@@ -6855,6 +6855,23 @@ span.text-date {
   border-radius: 0 0 4rem 4rem;
 }
 
+.bg-bkl-mobile {
+  background: url(/assets/images/asset_pertamina/olimart-bengkel.jpg)center/cover no-repeat;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 35px;
+  position: relative;
+  z-index: 10;
+}
+
+.bg-enduro-mobile {
+  background: url(/assets/images/asset_pertamina/enduro-bengkel.png)center/cover no-repeat;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
 .bg-bkl-enduro {
   background: url(/assets/images/asset_pertamina/background_bengkel-2.jpg)center/cover no-repeat;
   padding-top: 5rem;
@@ -7138,8 +7155,161 @@ table td {
   top: -2rem;
   z-index: 20;
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 2e651696382a7623a7881b47c4593ff81ea49619
+
+.tab-slider--nav {
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+      z-index: 99;
+    margin-top: -3rem;
+}
+
+.tab-slider--nav2 {
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: center;
+  position: relative;
+  display: flex;
+      z-index: 99;
+    margin-top: -3rem;
+}
+
+.tab-slider--tabs {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  height: 35px;
+}
+
+
+.tab-slider--tabs2 {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  height: 35px;
+}
+
+
+.tab-slider--tabs:after {
+  content: "";
+  width: 50%;
+  /* background: #345f90; */
+  border-bottom-style: solid;
+  border-bottom-color:#345f90 ;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.tab-slider--tabs2:after {
+  content: "";
+  width: 50%;
+  /* background: #345f90; */
+  border-bottom-style: solid;
+  border-bottom-color:#345f90 ;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 250ms ease-in-out;
+}
+.tab-slider--tabs.slide:after {
+  left: 50%;
+}
+
+.tab-slider--tabs2.slide:after {
+  left: 50%;
+}
+
+.tab-slider--trigger {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  /* color: #345f90; */
+  text-align: center;
+  padding: 11px 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+}
+
+.tab-slider--trigger2 {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  /* color: #345f90; */
+  text-align: center;
+  padding: 11px 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+}
+.tab-slider--trigger {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  /* color: #345f90; */
+  text-align: center;
+  padding: 11px 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+}
+.tab-slider--trigger2 {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: bold;
+  /* color: #345f90; */
+  text-align: center;
+  padding: 11px 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 250ms ease-in-out;
+}
+
+
+.tab-slider--trigger.active {
+  color: #fff;
+}
+.tab-slider--trigger2.active {
+  color: #fff;
+}
+
+.tab-slider--body {
+  margin-bottom: 20px;
+}
+
+.tab-slider--body2 {
+  margin-bottom: 20px;
+}
+
+.img-mobile-oli {
+  position: relative;
+  display: block;
+  top: 3rem;
+  z-index: 99;
+}
