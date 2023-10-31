@@ -1,0 +1,130 @@
+.bg-industry{
+    background: url(/assets/images/new_asset/industri/industry__19574.jpg) center/cover no-repeat;
+    padding-top: 25rem;
+    padding-bottom: 5rem;
+    margin-top: 65px;
+    position: relative;
+    z-index: 10;
+    border-radius: 0 0 4rem 4rem;
+    object-fit: cover;
+  }
+
+  .card___indust img{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    object-fit: cover;
+}
+
+.card___indust h3{
+    position: relative;
+    display: block;
+    bottom: 3rem;
+    left: 1rem;
+}
+
+.text__small{
+    font-weight: 300;
+}
+
+.bg___indust{
+    background-color:  #DF0D1B;;
+}
+
+.No___indust{
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.thumb img{
+    border-radius: 15px;
+
+}
+
+.text__default{
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.btn___default_bg__white{
+    background: #DF0D1B;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    border: 1px solid #ffffff57;
+    top: 4px;
+    text-decoration: none;
+}
+
+/* slide image gallery */
+#active-img {
+    opacity: 1;
+  }
+  
+  .listing-gallery img {
+    cursor: pointer;
+  }
+  
+  .listing-gallery-img-lg,
+  .listing-gallery-img-sm {
+    border: 5px solid white;
+  }
+  
+  .listing-gallery-img-lg {
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .listing-gallery-img-sm {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .listing-gallery-img {
+    opacity: 0.6;
+    transition: 0.2s all;
+  }
+  
+  .listing-gallery-img.selected {
+    opacity: 1;
+    transition: 0.2s all;
+  }
+  
+  .responsive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .title__mobile_text {
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.text___bold{
+    font-weight: bold;
+}
+/* batas */
+
+@media (min-width: 576px) { 
+    .title__mobile_text {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+ }

@@ -7313,3 +7313,17 @@ table td {
   top: 3rem;
   z-index: 99;
 }
+
+
+.new___img_{
+  background: url(../images/asset_pertamina/img-new.jpg);
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 70px;
+    padding-top: 75px;
+    padding-bottom: 85px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
