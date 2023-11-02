@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .drop-down{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(237, 237, 237);
+  box-shadow: 0 4px 8px rgb(0,0,0,0,.322);
+  width: 200px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.arrow{
+  font-size: 30px;
+}
+
+.wrapper{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.wrapper img{
+  height: 30px;
+}
+
+.list{
+  background-color: rgb(237, 237, 237);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  max-height: 250px;
+  width: 100%;
+  z-index: 99;
+  width: 100%;
+  display: none;
+  padding: 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.show{
+  display: block;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 16px;
+  gap: 0.5rem;
+}
+
+.item img{
+  width: 30px;
+}
+
+.item:hover{
+  background-color: rgb(210, 210, 210);
+}
+    </style>
+    
+  
+</head>
+<body>
+
+    <div class="col-lg-4 col-md-12">
+        <p class="title__option text-white">choose your country</p>
+        <div class="drop-down">
+            <div class="wrapper">
+                <img src="assets/images/new_asset/mancanegara/australia.png">
+                <div class="selected">Australia</div>
+            </div>
+    
+            <i class="fas fa-chevron-down arrow"></i>
+            <div class="list">
+                <div class="item">
+                    <img src="assets/images/new_asset/mancanegara/thailand.png">
+                    <div class="text">Thailand</div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/new_asset/mancanegara/malaysia (1).png">
+                    <div class="text">Malaysia</div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/new_asset/mancanegara/myanmar.png">
+                    <div class="text">Myanmar</div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/new_asset/mancanegara/vietnam.png">
+                    <div class="text">Vietnam</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const dropdown = document.querySelector('.drop-down');
+        const list = document.querySelector(".list");
+        const selected = document.querySelector('.selected');
+        const selectedImg = document.querySelector('.wrapper img'); // Select the img inside the wrapper
+    
+        dropdown.addEventListener('mousedown', () => {
+            list.classList.toggle('show');
+        })
+    
+        list.addEventListener('mousedown', (e) => {
+            const img = e.target.querySelector('img');
+            const text = e.target.querySelector('.text');
+    
+            selectedImg.src = img.src;
+            selected.innerHTML = text.innerHTML;
+            list.classList.remove('show'); // Close the list after selection
+        })
+    </script>
+    
+    
+    
+</body>
+</html>

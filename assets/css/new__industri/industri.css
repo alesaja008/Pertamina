@@ -203,7 +203,7 @@ color: grey;
   max-height: 250px;
   /* overflow-y: scroll; */
   width: 100%;
-  z-index: -1;
+  z-index: 99;
   width: 100%;
   display: none;
   padding: 0;
@@ -238,4 +238,46 @@ color: grey;
   padding-bottom: 10px;
   position: relative;
 left: 8px
+}
+
+.bg__Red__Full{
+  background: #DF0D1B;
+  position: relative;
+    top: -4rem;
+}
+
+
+
+
+.card__img__AllSlider h3{
+  position: absolute;
+    z-index: 99;
+    top: 2rem;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.card__img__AllSlider img{
+  border-radius: 30px;
+}
+
+.btn__mncgra__Slider{
+  background: #DF0D1B;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    border: 1px solid #ffffff57;
+    top: 4px;
+    text-decoration: none;
+    position: relative;
+    top: -4rem;
+}
+
+.btn__mncgra__Slider:hover{
+  background-color: white;
+  color: #DF0D1B;
 }
