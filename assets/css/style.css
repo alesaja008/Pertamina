@@ -2348,7 +2348,8 @@ color: rgb(255, 255, 255);
 .appie-single-service-2:hover {
   box-shadow: 0 -3px 0 0 rgb(234 76 137 / 0%), 0 40px 40px 0 rgb(14 17 51 / 10%);
   border-top: 8px solid #fff;
-  transform: translateY(-10px)
+  transform: translateY(-10px);
+  background-color: #ab0000;
 }
 
 .appie-single-service-2.appie-single-service-about {
@@ -5699,9 +5700,7 @@ select#\# {
   width: 15%
 }
 
-.col-lg-3.col-md-6.col-6 {
-  margin-top: -3rem
-}
+
 
 .hero-movie {
   background: linear-gradient(89.98deg, #9a0405 -1.23%, #e02f2d 93.13%);
@@ -5742,9 +5741,7 @@ select#\# {
     font-size: 15px
   }
 
-  .col-lg-3.col-md-6.col-6 {
-    margin-top: -10px
-  }
+
 
   .hero-movie {
     margin-top: 4.3rem

@@ -86,7 +86,9 @@ font-weight: 600;
         -o-border-radius: 5px;
 }
 .title__galery p{
-    font-size: 40px;
+  font-size: 25px;
     font-weight: 300;
+    text-align: center;
       }
  }
+

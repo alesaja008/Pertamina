@@ -310,3 +310,9 @@ left: 8px
   margin-top: 10px;
   text-decoration: none;
 }
+
+@media (min-width: 768px) { 
+  section.pt-50.pb-30.special__margin {
+    margin-top: 15rem;
+}
+  }
