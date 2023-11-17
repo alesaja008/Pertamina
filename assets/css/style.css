@@ -4125,25 +4125,13 @@ color: rgb(255, 255, 255);
   line-height: 56px
 }
 
-.appie-project-3-box a {
-  background: #fff;
-  color: #0e1133;
-  border-color: #fff;
-  line-height: 55px;
-  padding: 0 40px
-}
+
 
 
 
 .appie-footer-area {
   padding-top: 4rem;
-  padding-bottom: 60px;
   background: #292929;
-  border-radius: 5rem 0 0 0;
-  -webkit-border-radius: 5rem 0 0 0;
-  -moz-border-radius: 5rem 0 0 0;
-  -ms-border-radius: 5rem 0 0 0;
-  -o-border-radius: 5rem 0 0 0;
 }
 
 .appie-footer-area.appie-footer-3-area {
@@ -4177,10 +4165,7 @@ color: rgb(255, 255, 255);
   color: #fff
 }
 
-.footer-about-widget p {
-  padding-top: 25px;
-  text-align: left
-}
+
 
 .footer-about-widget>a {
   font-size: 15px;
@@ -4261,12 +4246,7 @@ color: rgb(255, 255, 255);
   position: relative
 }
 
-.footer-widget-info ul li a i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #2b70fa
-}
+
 
 @media only screen and (min-width:768px) and (max-width:991px) {
   .appie-project-3-box .title {
@@ -4296,18 +4276,16 @@ color: rgb(255, 255, 255);
 @media (max-width:767px) {
   .appie-project-3-box .title {
     font-size: 35px;
-    line-height: 46px;
+    line-height: 10px;
     margin-bottom: 30px
   }
 
   .footer-about-widget {
-    text-align: center;
+  
     padding-right: 0
   }
 
-  .footer-widget-info {
-    text-align: center
-  }
+ 
 
   .footer-copyright {
     display: block !important;
@@ -6094,9 +6072,7 @@ select#\# {
 
 
 
-.copyright-text {
-  background: #292929;
-}
+
 
 .Tittle-dsc {
   padding-bottom: 3rem
@@ -7323,4 +7299,112 @@ table td {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+}
+
+/* footer tambahan */
+
+.footer-about-widget p{
+  margin-top: 20px;
+  color:white;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.footer-navigation ul li a{
+  color:white;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.footer-navigation ul li a i{
+  color:white;
+
+}
+
+.footer-widget-info ul li a {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.logo img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list__footer {
+  background-color: #3D3B3B;
+}
+
+.copyright-text p{
+  padding: 10px 0;
+  text-align: center;
+ position: relative;
+ display: block;
+}
+
+.footer-widget-info ul li a i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+
+}
+
+.logo__call_Center img {
+  margin-top: 10px;
+  width: 50px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appie-footer-10-area .footer-navigation ul li a:hover, .condition-check label a, .footer-navigation ul li a:hover, .search-form button:hover {
+  color: #db0f30;
+  font-weight: bold;
+}
+
+hr.line__footer {
+  border: 5px solid #08579F;
+  position: relative;
+  top: -5rem;
+}
+
+section.footer__cta {
+  background: linear-gradient(90deg, #860E14 0%, #DC0E1C 100%);
+}
+
+.btn__oil {
+  background: #fff;
+  color: #0e1133;
+  border-color: #fff;
+  line-height: 55px;
+  padding: 0 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn__oil:hover {
+  background: #1568B3;
+  color: white;
+}
+.btn__distr {
+  background: #1568B3;
+  color: white;
+  border-color: #fff;
+  line-height: 55px;
+  padding: 0 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn__distr:hover{
+  background-color: white;
+  color: #1568B3;
+}
+
+span.text__small__btn {
+  font-weight: 300;
 }
