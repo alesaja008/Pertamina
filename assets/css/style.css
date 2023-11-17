@@ -7408,3 +7408,13 @@ section.footer__cta {
 span.text__small__btn {
   font-weight: 300;
 }
+
+@media screen and (min-width: 1920px)  {
+  .btn__oil {
+    width: 90%;
+}
+.btn__distr {
+  width: 90%;
+}
+}
+

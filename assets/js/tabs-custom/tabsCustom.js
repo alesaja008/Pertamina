@@ -6,10 +6,10 @@ const tabMenu = document.querySelector('.tab-menu');
 
 const iconVisibility = () => {
 	let scrollLeftValue = Math.ceil(tabMenu.scrollLeft);
-	console.log('1.', scrollLeftValue);
+	// console.log('1.', scrollLeftValue);
 
 	let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
-	console.log('2.', scrollableWidth);
+	// console.log('2.', scrollableWidth);
 
 	btnLeft.style.display = scrollLeftValue > 0 ? 'block' : 'none';
 	btnRight.style.display = scrollableWidth > scrollLeftValue ? 'block' : 'none';

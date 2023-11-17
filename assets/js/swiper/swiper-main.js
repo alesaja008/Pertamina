@@ -66,11 +66,11 @@ var swiperProduct = new Swiper(".mySwiperProduct", {
   },
 });
 
-<<<<<<< HEAD
+
 
     // distributo detail slider
 
-=======
+
 // slider logo logo
 
 var logo = new Swiper(".myLogo", {
@@ -127,4 +127,4 @@ var swiperContent = new Swiper(".mySwiperLtc", {
     },
   },
 });
->>>>>>> 2e651696382a7623a7881b47c4593ff81ea49619
+
