@@ -6,35 +6,10 @@
     <title>Document</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--first-color);
-        }
-
-        section {
-            position: relative;
-            margin: 0 80px;
-            transition: .5s ease;
-        }
-
-        .main-container {
-            position: relative;
-        }
-
         /* ===== Tab navigation content ===== */
         .tab-nav-bar {
             position: relative;
-            margin: 65px 10px 40px 10px;
+
         }
 
         .tab-navigation {
@@ -49,15 +24,9 @@
         .tab-menu {
             color: var(--text-color);
             list-style: none;
-            background-color: var(--third-color);
             max-width: 800px;
-            padding: 10px;
             white-space: nowrap;
-            border-bottom: 1px solid var(--third-color);
-            border-radius: 50px;
-            box-shadow: var(--box-shadow);
             scroll-behavior: smooth;
-
             user-select: none;
             overflow-x: auto;
         }
@@ -77,8 +46,8 @@
             font-size: 1em;
             font-weight: 400;
             margin: 0 2px;
-            padding: 10px 20px;
-            border-radius: 15px;
+            padding: 5px 5px;
+            border-radius: 20px;
             cursor: pointer;
             user-select: none;
             transition: background-color .3s ease;
@@ -89,12 +58,11 @@
         }
 
         .tab-btn:hover {
-            border: 1px solid rgb(125, 125, 125);
+            background-color: var(--first-color);
         }
 
         .tab-btn.active {
-            /* background-color: var(--second-color); */
-            border: 1px solid rgb(125, 125, 125);
+            background-color: red;
         }
 
         .left-btn,
@@ -124,6 +92,7 @@
 
 
 
+
         /* ===== Tab content ===== */
         .tab-content {
             position: relative;
@@ -134,14 +103,11 @@
 
         .tab {
             position: absolute;
-            top: 0;
+            top: -1rem;
             right: auto;
             bottom: 0;
             left: auto;
-            max-width: 1100px;
-            padding: 15px 50px;
             opacity: 0;
-
             transform: translateX(25px);
             content-visibility: hidden;
         }
@@ -153,36 +119,14 @@
             transition: opacity 1s ease, transform 1s ease;
         }
 
-        .tab .row {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-        }
 
-        .tab .img-card {
-            position: relative;
-            width: 450px;
-            max-width: 450px;
-            height: 300px;
-            max-height: 300px;
-            border-radius: 20px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: var(--box-shadow);
-        }
 
-        .tab .img-card img {
-            width: 100%;
-            object-fit: cover;
-        }
 
-        .right-column {
-            max-width: 800px;
-        }
+
+
+        /* .right-column {
+            max-width: 100%;
+        } */
 
         .info .city,
         .info .description p {
@@ -202,15 +146,10 @@
             text-shadow: var(--text-shadow);
         }
 
-        .line-color-50\% {
-            width: 15%;
-            height: 3px;
-            border-radius: 20px;
-            background: linear-gradient(90deg, #1568B3 0%, #e20613 100%);
-            margin-bottom: 20px;
+        .tab-btn img {
+            width: 100px;
+            height: 100px;
         }
-
-
 
 
 
@@ -228,14 +167,7 @@
                 padding: 15px 25px;
             }
 
-            .tab .row {
-                flex-direction: column;
-            }
 
-            .tab .img-card {
-                width: auto;
-                max-width: 600px;
-            }
 
             .country {
                 font-size: 10vw;
@@ -244,145 +176,153 @@
 
         }
 
-        /* ==================== */
+        .line-color-50\% {
+            width: 15%;
+            height: 3px;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #1568B3 0%, #e20613 100%);
+            margin-bottom: 20px;
+        }
     </style>
+
 </head>
 
 <body>
-
-
-    <section class="main-container">
-        <div class="tab-nav-bar">
-            <div class="tab-navigation">
-
-                <ion-icon class="left-btn" name="chevron-back-outline"></ion-icon>
-                <ion-icon class="right-btn" name="chevron-forward-outline"></ion-icon>
-
-                <ul class="tab-menu">
-                    <li class="tab-btn active">
-                        <img style="width: 100%;" src="assets/images/asset_pertamina/logo/Group 1992.jpg" />
-                    </li>
-                    <li class="tab-btn">
-                        <img style="width: 100%;" src="assets/images/asset_pertamina/logo/Group 1993.jpg" />
-                    </li>
-                    <li class="tab-btn">
-                        <img style="width: 100%;" src="assets/images/asset_pertamina/logo/Group 1994.jpg" />
-                    </li>
-                    <li class="tab-btn">
-                        <img style="width: 100%;" src="assets/images/asset_pertamina/logo/Group 1995.jpg" />
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="tab-content">
-            <div class="tab active">
-
-                <div class="row">
-                    <div class="right-column">
-                        <div class="info">
-                            <h4 class="mb-3"><span class="tittle-option">Rincian</span>
-                                Produk</h4>
-                            <div class="line-color-50%"></div>
-                            <h5>MEDITRAN SX PLUS SAE 15W-40 API CI-4</h5>
-                            <div class="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                    fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem quos
-                                    deleniti eaque eveniet
-                                    repellat. Fuga, unde.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    repellat. Fuga, unde.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container">
+        <section class="main-container">
+            <div class="tab-nav-bar">
+                <div class="tab-navigation">
+                    <div class="left-btn">a</div>
+                    <div class="right-btn">b</div>
+                    <ul class="tab-menu">
+                        <li class="tab-btn active">
+                            <img src="https://www.pertaminalubricants.com/assets/images/turning-gear.png">
+                        </li>
+                        <li class="tab-btn">
+                            <img src="https://www.pertaminalubricants.com/assets/images/turbo-engine.png">
+                        </li>
+                        <li class="tab-btn">
+                            <img src="https://www.pertaminalubricants.com/assets/images/governor.png">
+                        </li>
+                        <li class="tab-btn">
+                            <img src="https://www.pertaminalubricants.com/assets/images/bracing.png">
+                        </li>
+                        <li class="tab-btn">
+                            <img src="https://www.pertaminalubricants.com/assets/images/alternator.png">
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="tab">
-                <div class="row">
-                    <div class="right-column">
-                        <div class="info">
-                            <h4 class="mb-3"><span class="tittle-option">Rincian</span>
-                                Produk</h4>
-                            <div class="line-color-50%"></div>
-                            <div class="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                    fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem quos
-                                    deleniti eaque eveniet
-                                    repellat. Fuga, unde.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    repellat. Fuga, unde.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="tab-content">
+                <div class="tab active">
+                    <div class="row">
 
-            <div class="tab">
-                <div class="row">
-                    <div class="right-column">
-                        <div class="info">
-                            <h4 class="mb-3"><span class="tittle-option">Rincian</span>
-                                Produk</h4>
-                            <div class="line-color-50%"></div>
-                            <div class="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                    fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem quos
-                                    deleniti eaque eveniet
-                                    repellat. Fuga, unde.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    repellat. Fuga, unde.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab">
-                <div class="row">
-                    <div class="right-column">
-                        <div class="info">
-                            <h4 class="mb-3"><span class="tittle-option">Rincian</span>
-                                Produk</h4>
-                            <div class="line-color-50%"></div>
-                            <div class="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                    fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem quos
-                                    deleniti eaque eveniet
-                                    repellat. Fuga, unde.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    repellat. Fuga, unde.
-                                </p>
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="city">Rincian Produk</h2>
+                                <div class="line-color-50%"></div>
+                                <div class="description">
+                                    <p>
+                                        1Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
+                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
+                                        quos deleniti eaque eveniet repellat. Fuga, unde
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="city">Rincian Produk</h2>
+                                <div class="line-color-50%"></div>
+                                <div class="description">
+                                    <p>
+                                        2Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
+                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
+                                        quos deleniti eaque eveniet
+                                        repellat. Fuga, unde.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="city">Rincian Produk</h2>
+                                <div class="line-color-50%"></div>
+                                <div class="description">
+                                    <p>
+                                        3Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
+                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
+                                        quos deleniti eaque eveniet
+                                        repellat. Fuga, unde.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="city">Rincian Produk</h2>
+                                <div class="line-color-50%"></div>
+                                <div class="description">
+                                    <p>
+                                        4Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
+                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
+                                        quos deleniti eaque eveniet
+                                        repellat. Fuga, unde.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="city">Rincian Produk</h2>
+                                <div class="line-color-50%"></div>
+                                <div class="description">
+                                    <p>
+                                        5Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
+                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
+                                        quos deleniti eaque eveniet
+                                        repellat. Fuga, unde.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </div>
-    </section>
-
-
-
+        </section>
+    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <script>
         // Javascript for tab navigation horizontal scroll buttons
 
@@ -392,10 +332,10 @@
 
         const iconVisibility = () => {
             let scrollLeftValue = Math.ceil(tabMenu.scrollLeft);
-            console.log('1.', scrollLeftValue);
+            // console.log('1.', scrollLeftValue);
 
             let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
-            console.log('2.', scrollableWidth);
+            // console.log('2.', scrollableWidth);
 
             btnLeft.style.display = scrollLeftValue > 0 ? 'block' : 'none';
             btnRight.style.display = scrollableWidth > scrollLeftValue ? 'block' : 'none';
@@ -480,6 +420,9 @@
             });
         });
     </script>
+
+
+
 </body>
 
 </html>
