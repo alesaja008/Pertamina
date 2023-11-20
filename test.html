@@ -1,428 +1,366 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
 
-    <style>
-        /* ===== Tab navigation content ===== */
-        .tab-nav-bar {
-            position: relative;
+  <style>
+    .img__marine {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+    .nav-tabs {
+      border: none;
+    }
 
-        }
+    .nav-tabs .nav-link.active {
+      color: #495057;
+      background-color: #e41313;
+      border: none;
+    }
+    .nav-tabs .nav-link:hover {
+      isolation: isolate;
+      border: none;
+    }
 
-        .tab-navigation {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: fit-content;
-            margin: 0 auto;
-        }
+    .nav-tabs .nav-link {
+      padding: 5px;
+      border-radius: 15px;
+    }
 
-        .tab-menu {
-            color: var(--text-color);
-            list-style: none;
-            max-width: 800px;
-            white-space: nowrap;
-            scroll-behavior: smooth;
-            user-select: none;
-            overflow-x: auto;
-        }
+    .line-color-50\% {
+      width: 15%;
+      height: 3px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #1568b3 0%, #e20613 100%);
+      margin-bottom: 20px;
+    }
+  </style>
 
-        .tab-menu.dragging {
-            scroll-behavior: unset;
-            cursor: grab;
-        }
-
-        .tab-menu::-webkit-scrollbar {
-            display: none;
-        }
-
-        .tab-btn {
-            display: inline-block;
-            color: var(--text-color);
-            font-size: 1em;
-            font-weight: 400;
-            margin: 0 2px;
-            padding: 5px 5px;
-            border-radius: 20px;
-            cursor: pointer;
-            user-select: none;
-            transition: background-color .3s ease;
-        }
-
-        .tab-menu.dragging .tab-btn {
-            pointer-events: none;
-        }
-
-        .tab-btn:hover {
-            background-color: var(--first-color);
-        }
-
-        .tab-btn.active {
-            background-color: red;
-        }
-
-        .left-btn,
-        .right-btn {
-            position: absolute;
-            color: var(--text-color);
-            font-size: 1.8em;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .left-btn {
-            left: 0;
-            background: linear-gradient(to left, transparent, var(--first-color) 80%);
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-            display: none;
-        }
-
-        .right-btn {
-            right: 0;
-            background: linear-gradient(to right, transparent, var(--first-color) 80%);
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-        }
-
-
-
-
-
-        /* ===== Tab content ===== */
-        .tab-content {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .tab {
-            position: absolute;
-            top: -1rem;
-            right: auto;
-            bottom: 0;
-            left: auto;
-            opacity: 0;
-            transform: translateX(25px);
-            content-visibility: hidden;
-        }
-
-        .tab.active {
-            transform: translateX(0);
-            content-visibility: visible;
-            opacity: 1;
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-
-
-
-
-
-        /* .right-column {
-            max-width: 100%;
-        } */
-
-        .info .city,
-        .info .description p {
-            color: var(--text-color);
-            margin-bottom: 10px;
-        }
-
-        .info .city {
-            font-size: 2em;
-        }
-
-        .country {
-            color: var(--third-color);
-            font-size: 5em;
-            font-weight: 700;
-            text-align: center;
-            text-shadow: var(--text-shadow);
-        }
-
-        .tab-btn img {
-            width: 100px;
-            height: 100px;
-        }
-
-
-
-        /* ===== Media queries (max-width: 1050px;) ===== */
-        @media screen and (max-width: 1050px) {
-            section {
-                margin: 0 0;
-            }
-
-            .tab-nav-bar {
-                margin: 65px 20px 40px 25px;
-            }
-
-            .tab {
-                padding: 15px 25px;
-            }
-
-
-
-            .country {
-                font-size: 10vw;
-                padding-bottom: 50px;
-            }
-
-        }
-
-        .line-color-50\% {
-            width: 15%;
-            height: 3px;
-            border-radius: 20px;
-            background: linear-gradient(90deg, #1568B3 0%, #e20613 100%);
-            margin-bottom: 20px;
-        }
-    </style>
-
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <section class="main-container">
-            <div class="tab-nav-bar">
-                <div class="tab-navigation">
-                    <div class="left-btn">a</div>
-                    <div class="right-btn">b</div>
-                    <ul class="tab-menu">
-                        <li class="tab-btn active">
-                            <img src="https://www.pertaminalubricants.com/assets/images/turning-gear.png">
-                        </li>
-                        <li class="tab-btn">
-                            <img src="https://www.pertaminalubricants.com/assets/images/turbo-engine.png">
-                        </li>
-                        <li class="tab-btn">
-                            <img src="https://www.pertaminalubricants.com/assets/images/governor.png">
-                        </li>
-                        <li class="tab-btn">
-                            <img src="https://www.pertaminalubricants.com/assets/images/bracing.png">
-                        </li>
-                        <li class="tab-btn">
-                            <img src="https://www.pertaminalubricants.com/assets/images/alternator.png">
-                        </li>
-                    </ul>
-                </div>
+      <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            data-target="#satu"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            <img
+              class="img__marine"
+              src="https://www.pertaminalubricants.com/assets/images/low-speed.png"
+            />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            data-target="#dua"
+            type="button"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+          >
+            <img
+              class="img__marine"
+              src="https://www.pertaminalubricants.com/assets/images/low-speed-system.png"
+            />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="contact-tab"
+            data-toggle="tab"
+            data-target="#tiga"
+            type="button"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+          >
+            <img
+              class="img__marine"
+              src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+            />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="contact-tab"
+            data-toggle="tab"
+            data-target="#empat"
+            type="button"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+          >
+            <img
+              class="img__marine"
+              src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+            />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="contact-tab"
+            data-toggle="tab"
+            data-target="#lima"
+            type="button"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+          >
+            <img
+              class="img__marine"
+              src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+            />
+          </button>
+        </li>
+      </ul>
+
+      <!-- batas -->
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="satu"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <!-- batas -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-toggle="tab"
+                data-target="#satu_satu"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                <img
+                  class="img__marine"
+                  src="https://www.pertaminalubricants.com/assets/images/low-speed.png"
+                />
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                data-target="#dua_dua"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                <img
+                  class="img__marine"
+                  src="https://www.pertaminalubricants.com/assets/images/low-speed-system.png"
+                />
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-toggle="tab"
+                data-target="#tiga_tiga"
+                type="button"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                <img
+                  class="img__marine"
+                  src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+                />
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-toggle="tab"
+                data-target="#empat_empat"
+                type="button"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                <img
+                  class="img__marine"
+                  src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+                />
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-toggle="tab"
+                data-target="#lima_lima"
+                type="button"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                <img
+                  class="img__marine"
+                  src="https://www.pertaminalubricants.com/assets/images/high-speed-system.png"
+                />
+              </button>
+            </li>
+          </ul>
+
+          <!-- batas -->
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="satu_satu"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <h4 class="mb-3">
+                <span class="tittle-option">Rincian</span> Produk
+              </h4>
+              <div class="line-color-50%"></div>
+              <p>
+                #1 Pelumas sintetik berkualitas premium untuk aplikasi mesin
+                diesel tugas berat yang dirancang untuk memberikan perlindungan
+                ekstra pada kondisi aplikasi yang berat
+              </p>
             </div>
-
-            <div class="tab-content">
-                <div class="tab active">
-                    <div class="row">
-
-                        <div class="right-column">
-                            <div class="info">
-                                <h2 class="city">Rincian Produk</h2>
-                                <div class="line-color-50%"></div>
-                                <div class="description">
-                                    <p>
-                                        1Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
-                                        quos deleniti eaque eveniet repellat. Fuga, unde
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <div class="row">
-
-                        <div class="right-column">
-                            <div class="info">
-                                <h2 class="city">Rincian Produk</h2>
-                                <div class="line-color-50%"></div>
-                                <div class="description">
-                                    <p>
-                                        2Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
-                                        quos deleniti eaque eveniet
-                                        repellat. Fuga, unde.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <div class="row">
-
-                        <div class="right-column">
-                            <div class="info">
-                                <h2 class="city">Rincian Produk</h2>
-                                <div class="line-color-50%"></div>
-                                <div class="description">
-                                    <p>
-                                        3Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
-                                        quos deleniti eaque eveniet
-                                        repellat. Fuga, unde.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab">
-                    <div class="row">
-
-                        <div class="right-column">
-                            <div class="info">
-                                <h2 class="city">Rincian Produk</h2>
-                                <div class="line-color-50%"></div>
-                                <div class="description">
-                                    <p>
-                                        4Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
-                                        quos deleniti eaque eveniet
-                                        repellat. Fuga, unde.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab">
-                    <div class="row">
-
-                        <div class="right-column">
-                            <div class="info">
-                                <h2 class="city">Rincian Produk</h2>
-                                <div class="line-color-50%"></div>
-                                <div class="description">
-                                    <p>
-                                        5Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam excepturi
-                                        fugiat natus hic aspernatur, magnam molestiae! Aut sit enim labore qui, autem
-                                        quos deleniti eaque eveniet
-                                        repellat. Fuga, unde.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="tab-pane fade"
+              id="dua_dua"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <h4 class="mb-3">
+                <span class="tittle-option">Rincian</span> Produk
+              </h4>
+              <div class="line-color-50%"></div>
+              <p>
+                #2 Pelumas sintetik berkualitas premium untuk aplikasi mesin
+                diesel tugas berat yang dirancang untuk memberikan perlindungan
+                ekstra pada kondisi aplikasi yang berat
+              </p>
             </div>
-        </section>
+            <div
+              class="tab-pane fade"
+              id="tiga_tiga"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <h4 class="mb-3">
+                <span class="tittle-option">Rincian</span> Produk
+              </h4>
+              <div class="line-color-50%"></div>
+              <p>
+                #3 Pelumas sintetik berkualitas premium untuk aplikasi mesin
+                diesel tugas berat yang dirancang untuk memberikan perlindungan
+                ekstra pada kondisi aplikasi yang berat
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="empat_empat"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <h4 class="mb-3">
+                <span class="tittle-option">Rincian</span> Produk
+              </h4>
+              <div class="line-color-50%"></div>
+              <p>
+                #4 Pelumas sintetik berkualitas premium untuk aplikasi mesin
+                diesel tugas berat yang dirancang untuk memberikan perlindungan
+                ekstra pada kondisi aplikasi yang berat
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="lima_lima"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <h4 class="mb-3">
+                <span class="tittle-option">Rincian</span> Produk
+              </h4>
+              <div class="line-color-50%"></div>
+              <p>
+                #5 Pelumas sintetik berkualitas premium untuk aplikasi mesin
+                diesel tugas berat yang dirancang untuk memberikan perlindungan
+                ekstra pada kondisi aplikasi yang berat
+              </p>
+            </div>
+          </div>
+          <!-- batas -->
+        </div>
+        <div
+          class="tab-pane fade"
+          id="dua"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          2
+        </div>
+        <div
+          class="tab-pane fade"
+          id="tiga"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          3
+        </div>
+        <div
+          class="tab-pane fade"
+          id="empat"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          3
+        </div>
+        <div
+          class="tab-pane fade"
+          id="lima"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          3
+        </div>
+      </div>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script>
-        // Javascript for tab navigation horizontal scroll buttons
-
-        const btnLeft = document.querySelector('.left-btn');
-        const btnRight = document.querySelector('.right-btn');
-        const tabMenu = document.querySelector('.tab-menu');
-
-        const iconVisibility = () => {
-            let scrollLeftValue = Math.ceil(tabMenu.scrollLeft);
-            // console.log('1.', scrollLeftValue);
-
-            let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
-            // console.log('2.', scrollableWidth);
-
-            btnLeft.style.display = scrollLeftValue > 0 ? 'block' : 'none';
-            btnRight.style.display = scrollableWidth > scrollLeftValue ? 'block' : 'none';
-        };
-
-        btnRight.addEventListener('click', () => {
-            tabMenu.scrollLeft += 150;
-            //iconVisibility();
-            setTimeout(() => iconVisibility(), 50);
-        });
-        btnLeft.addEventListener('click', () => {
-            tabMenu.scrollLeft -= 150;
-            //iconVisibility();
-            setTimeout(() => iconVisibility(), 50);
-        });
-
-        window.onload = function () {
-            btnRight.style.display =
-                tabMenu.scrollWidth > tabMenu.clientWidth
-                    || tabMenu.scrollWidth >= window.innerWidth
-                    ? 'block' : 'none';
-            btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? '' : 'none';
-        };
-
-        window.onresize = function () {
-            btnRight.style.display =
-                tabMenu.scrollWidth > tabMenu.clientWidth
-                    || tabMenu.scrollWidth >= window.innerWidth
-                    ? 'block' : 'none';
-            btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? '' : 'none';
-
-            let scrollLeftValue = Math.round(tabMenu.scrollLeft);
-            btnLeft.style.display = scrollLeftValue > 0 ? 'block' : 'none';
-        };
-
-
-
-
-        // Javascript to make the tab navigation draggable
-        let activeDrag = false;
-
-        tabMenu.addEventListener('mousemove', (drag) => {
-            if (!activeDrag) return;
-            tabMenu.scrollLeft -= drag.movementX;
-            iconVisibility();
-
-            tabMenu.classList.add('dragging');
-        });
-
-        document.addEventListener('mouseup', () => {
-            activeDrag = false;
-
-            tabMenu.classList.remove('dragging');
-        });
-
-        tabMenu.addEventListener('mousedown', () => {
-            activeDrag = true;
-        });
-
-
-
-        // Javascript to view tab contents on click tab buttons
-        const tabs = document.querySelectorAll('.tab');
-        const tabBtns = document.querySelectorAll('.tab-btn');
-
-        const tab_Nav = function (tabBtnClick) {
-            tabBtns.forEach((tabBtn) => {
-                tabBtn.classList.remove('active');
-            });
-
-            tabs.forEach((tab) => {
-                tab.classList.remove('active');
-            });
-
-            tabBtns[tabBtnClick].classList.add('active');
-            tabs[tabBtnClick].classList.add('active');
-        };
-
-        tabBtns.forEach((tabBtn, i) => {
-            tabBtn.addEventListener('click', () => {
-                tab_Nav(i);
-            });
-        });
-    </script>
-
-
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
